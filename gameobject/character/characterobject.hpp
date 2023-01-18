@@ -44,41 +44,42 @@ public:
     bool             m_KillMe;
 };
 
+//TODO: Wrong order
+enum ESkeletonJoint
+{
+    ESkeletonJoint_Character_Root,
+    ESkeletonJoint_Pelvis,
+    ESkeletonJoint_Spine_1,
+    ESkeletonJoint_Spine_2,
+    ESkeletonJoint_Neck,
+    ESkeletonJoint_Head,
+    ESkeletonJoint_Clavicle_L,
+    ESkeletonJoint_Shoulder_L,
+    ESkeletonJoint_Elbow_L,
+    ESkeletonJoint_Forarm_L,
+    ESkeletonJoint_Wrist_L,
+    ESkeletonJoint_Clavicle_R,
+    ESkeletonJoint_Shoulder_R,
+    ESkeletonJoint_Elbow_R,
+    ESkeletonJoint_Forarm_R,
+    ESkeletonJoint_Wrist_R,
+};
+
 class CharacterObject //: public InventoryOwner
 {
 public:
-    //TODO: Wrong order
-    enum ESkeletonJoint
-    {
-        ESkeletonJoint_Character_Root,
-        ESkeletonJoint_Pelvis,
-        ESkeletonJoint_Spine_1,
-        ESkeletonJoint_Spine_2,
-        ESkeletonJoint_Neck,
-        ESkeletonJoint_Head,
-        ESkeletonJoint_Clavicle_L,
-        ESkeletonJoint_Shoulder_L,
-        ESkeletonJoint_Elbow_L,
-        ESkeletonJoint_Forarm_L,
-        ESkeletonJoint_Wrist_L,
-        ESkeletonJoint_Clavicle_R,
-        ESkeletonJoint_Shoulder_R,
-        ESkeletonJoint_Elbow_R,
-        ESkeletonJoint_Forarm_R,
-        ESkeletonJoint_Wrist_R,
-    };
-
 
     //virtual ~CharacterObject();
     CharacterObject(const char* name, /*core::MemoryAllocator*/ void * allocator);
 
-    CharacterObject* GetMainCharacter();
 
     bool IsCharacterDead();
     int GetHealth();
     math::Vector* GetJointPosition(unsigned int jointIndex);
 
 };
+
+CharacterObject* GetMainCharacter();
 
 #pragma pack(pop)
 

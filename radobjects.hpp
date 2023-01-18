@@ -30,13 +30,6 @@ namespace core
 
 }
 
-#pragma pack(push, 1)
-class VectorCamera{
-public:  
-    void WorldToViewport(math::Vector* worldPoint, math::Vector* cpoint);
-};
-#pragma pack(pop)
-
 namespace pure3d
 {
 
@@ -55,7 +48,18 @@ namespace pure3d
         core::Key m_uid;
     };
 
-    class VectorCamera;
+    //int AssignRef(int);
+
+    class VectorCamera{
+    public:  
+        static VectorCamera* GetInstance(); 
+        void WorldToViewport(math::Vector* worldPoint, math::Vector* cpoint);
+    };
+    
+    class Camera
+    {
+
+    };
 }
 
 #endif // !_RADOBJECT_HPP

@@ -3,6 +3,11 @@
 
 static CharacterObject** s_pMainChar = (CharacterObject**)0x00825A78;
 
+CharacterObject* GetMainCharacter()
+{
+    return (*s_pMainChar);
+}
+
 //----- (005885C0) --------------------------------------------------------
 //CharacterObject *__thiscall ConcreteClassRep_CharacterObject__create(char *this)
 
@@ -12,11 +17,6 @@ static CharacterObject** s_pMainChar = (CharacterObject**)0x00825A78;
 CharacterObject::CharacterObject(const char* name, /* TODO: core::MemoryAllocator*/ void * allocator) //: InventoryOwner(name,allocator)
 {
     ((void(__thiscall *)(CharacterObject *, const char*, void* ))0x00573870)(this, name, allocator);
-}
-
-CharacterObject* CharacterObject::GetMainCharacter()
-{
-    return (*s_pMainChar);
 }
 
 //----- (00572C30) --------------------------------------------------------
