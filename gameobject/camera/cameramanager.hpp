@@ -4,7 +4,7 @@
 #include "gameobject/gamesetobject.hpp"
 #include "radobjects.hpp"
 
-#pragma pack(push, 4)
+#pragma pack(push, 1)
 
 class CameraManager : public GameSetObject
 {
@@ -14,6 +14,7 @@ public:
     static CameraManager* GetInstance( void );
 
     pure3d::Camera* GetCurrentRenderCamera();
+    pure3d::Camera* GetCurrentInGameCamera();
 };
 
 #pragma pack(pop)

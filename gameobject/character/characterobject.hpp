@@ -65,13 +65,32 @@ enum ESkeletonJoint
     ESkeletonJoint_Wrist_R,
 };
 
+enum ESkeletonJointNew
+{
+    NewESkeletonJoint_Character_Root,   //OK
+    NewESkeletonJoint_Pelvis,
+    NewESkeletonJoint_Spine_1,
+    NewESkeletonJoint_Spine_2,
+    NewESkeletonJoint_Neck,
+    NewESkeletonJoint_Clavicle_L,
+    NewESkeletonJoint_Shoulder_L,
+    NewESkeletonJoint_Elbow_L,
+    NewESkeletonJoint_Forarm_L,
+    NewESkeletonJoint_Wrist_L,
+    NewESkeletonJoint_Clavicle_R,
+    NewESkeletonJoint_Shoulder_R,
+    NewESkeletonJoint_Elbow_R,
+    NewESkeletonJoint_Head,             //OK
+    NewESkeletonJoint_Forarm_R,
+    NewESkeletonJoint_Wrist_R,
+};
+
 class CharacterObject //: public InventoryOwner
 {
 public:
 
     //virtual ~CharacterObject();
     CharacterObject(const char* name, /*core::MemoryAllocator*/ void * allocator);
-
 
     bool IsCharacterDead();
     int GetHealth();
