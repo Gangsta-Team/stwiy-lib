@@ -36,7 +36,8 @@ int CharacterObject::GetHealth()
 
 //----- (00572480) --------------------------------------------------------
 //const math::Vector **__thiscall CharacterObject::GetJointPosition(CharacterObject *this, unsigned int jointIndex)
-math::Vector* CharacterObject::GetJointPosition( unsigned int jointIndex ) 
+math::Vector* CharacterObject::GetJointPosition( unsigned int jointIndex) 
 { 
-    return ((math::Vector*(__thiscall *)(CharacterObject *, unsigned int))0x00572480)(this, jointIndex);
+    math::Vector *res = ((math::Vector*(__thiscall *)(CharacterObject *, unsigned int))0x00572480)(this, jointIndex);
+    return new math::Vector(res->x, res->y, res->z);
 }

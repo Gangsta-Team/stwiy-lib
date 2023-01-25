@@ -17,10 +17,13 @@ file(GLOB stwiyLibSrc
     "scripting/*.*"
     "gameobject/*.*"
     "engine/*.*"
+    "engine/object/*.*"
     "gameobject/spawnobject/*.*"
     "gameobject/render/*.*"
+    "gameobject/camera/*.*"
     "gameobject/character/*.*"
 )
+
 
 add_library(${PROJECT_NAME} STATIC ${stwiyLibSrc})
 add_library(lib::stwiyLib ALIAS ${PROJECT_NAME})

@@ -1,6 +1,9 @@
 #ifndef _CVMANAGER_HPP
 #define _CVMANAGER_HPP
 
+#include "engine/object/gameset.hpp"
+#include "gameobject/character/characterobject.hpp"
+
 #pragma pack(push, 1)
 
 class CVManager// : public FlowClient
@@ -9,6 +12,7 @@ public:
     virtual ~CVManager() = 0;
 
     static CVManager* GetInstance( void );
+    GameSet<CharacterObject>* GetCharacterSet();
 };
 
 #pragma pack(pop)

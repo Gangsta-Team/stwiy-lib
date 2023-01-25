@@ -44,45 +44,34 @@ public:
     bool             m_KillMe;
 };
 
-//TODO: Wrong order
 enum ESkeletonJoint
 {
-    ESkeletonJoint_Character_Root,
-    ESkeletonJoint_Pelvis,
-    ESkeletonJoint_Spine_1,
-    ESkeletonJoint_Spine_2,
-    ESkeletonJoint_Neck,
-    ESkeletonJoint_Head,
-    ESkeletonJoint_Clavicle_L,
-    ESkeletonJoint_Shoulder_L,
-    ESkeletonJoint_Elbow_L,
-    ESkeletonJoint_Forarm_L,
-    ESkeletonJoint_Wrist_L,
-    ESkeletonJoint_Clavicle_R,
-    ESkeletonJoint_Shoulder_R,
-    ESkeletonJoint_Elbow_R,
-    ESkeletonJoint_Forarm_R,
-    ESkeletonJoint_Wrist_R,
-};
-
-enum ESkeletonJointNew
-{
-    NewESkeletonJoint_Character_Root,   //OK
-    NewESkeletonJoint_Pelvis,
-    NewESkeletonJoint_Spine_1,
-    NewESkeletonJoint_Spine_2,
-    NewESkeletonJoint_Neck,
-    NewESkeletonJoint_Clavicle_L,
-    NewESkeletonJoint_Shoulder_L,
-    NewESkeletonJoint_Elbow_L,
-    NewESkeletonJoint_Forarm_L,
-    NewESkeletonJoint_Wrist_L,
-    NewESkeletonJoint_Clavicle_R,
-    NewESkeletonJoint_Shoulder_R,
-    NewESkeletonJoint_Elbow_R,
-    NewESkeletonJoint_Head,             //OK
-    NewESkeletonJoint_Forarm_R,
-    NewESkeletonJoint_Wrist_R,
+    ESkeletonJoint_Character_Position,  //OK    0
+    ESkeletonJoint_Character_Origin,    //OK    1
+    ESkeletonJoint_Character_Root,      //OK    2
+    ESkeletonJoint_Pelvis,              //OK    3
+    ESkeletonJoint_Pelvis_L,            //OK    4
+    ESkeletonJoint_Knee_L,              //OK    5
+    ESkeletonJoint_Foot_L,              //OK    6
+    ESkeletonJoint_Pelvis_R,            //OK    7
+    ESkeletonJoint_Knee_R,              //OK    8
+    ESkeletonJoint_Foot_R,              //OK    9
+    ESkeletonJoint_Spine_1,             //OK    10
+    ESkeletonJoint_Spine_2,             //OK    11
+    ESkeletonJoint_Neck,                //OK    12
+    ESkeletonJoint_Head,                //OK    13
+    ESkeletonJoint_Clavicle_L,          //OK    14
+    ESkeletonJoint_Shoulder_L,          //OK    15
+    ESkeletonJoint_Elbow_L,             //OK    16
+    ESkeletonJoint_Forarm_L,            //OK    17
+    ESkeletonJoint_Wrist_L,             //OK    18
+    ESkeletonJoint_Character_Root1,     //OK    19
+    ESkeletonJoint_Clavicle_R,          //OK    20
+    ESkeletonJoint_Shoulder_R,          //OK    21
+    ESkeletonJoint_Elbow_R,             //OK    22
+    ESkeletonJoint_Forarm_R,            //OK    23
+    ESkeletonJoint_Wrist_R,             //OK    24
+    ESkeletonJoint_Hand_R,              //OK    25
 };
 
 class CharacterObject //: public InventoryOwner
