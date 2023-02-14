@@ -3,6 +3,7 @@
 
 #include "engine/object/gameset.hpp"
 #include "gameobject/character/characterobject.hpp"
+#include "gameobject/spawnobject/spawnobject.hpp"
 
 #pragma pack(push, 1)
 
@@ -13,6 +14,9 @@ public:
 
     static CVManager* GetInstance( void );
     GameSet<CharacterObject>* GetCharacterSet();
+
+    CharacterObject* RequestCharacterSpawn(void* spawnObject, SpawnObjectData* spawnObjectData, math::Vector& position, math::Vector& direction);
+    //VehicleObject* RequestVehicleSpawn();
 };
 
 #pragma pack(pop)
