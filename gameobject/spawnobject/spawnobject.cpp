@@ -1,6 +1,6 @@
 #include "spawnobject.hpp"
 
-SpawnObjectData* SpawnObjectData::GetInstance()
+SpawnObjectData::SpawnObjectData()
 {
-    return *(SpawnObjectData**)0x00604320;
+	((void(__thiscall*)(SpawnObjectData*))0x00604320)(this);
 }

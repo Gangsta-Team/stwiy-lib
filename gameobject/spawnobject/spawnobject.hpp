@@ -6,8 +6,6 @@
 class SpawnObjectData
 {
 public:
-    static SpawnObjectData * GetInstance(void);
-    
     const char *mName;
     const char *mScriptClass;
     const char *mClass;
@@ -17,6 +15,7 @@ public:
     uint8_t mIdleBehaviour;
     uint8_t mCombatBehaviour;
 
+	SpawnObjectData( void );
 };
 
 #endif // __SPAWNOBJECT_HPP
