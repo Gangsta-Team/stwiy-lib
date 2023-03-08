@@ -8,15 +8,11 @@ CameraManager* CameraManager::GetInstance()
     return (*s_CameraManagerInstance);
 }
 
-//----- (0055EFA0) --------------------------------------------------------
-//int __thiscall CameraManager::GetCurrentRenderCamera(_DWORD *this)
 pure3d::Camera* CameraManager::GetCurrentRenderCamera()
 {
     return ((pure3d::Camera*(__thiscall *)(CameraManager *))0x0055EFA0)(this);
 }
 
-//----- (006024A0) --------------------------------------------------------
-//Camera *__thiscall CameraManager::GetCurrentInGameCamera(Camera *this)
 pure3d::Camera* CameraManager::GetCurrentInGameCamera()
 {
     return ((pure3d::Camera*(__thiscall *)(CameraManager *))0x006024A0)(this);

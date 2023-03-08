@@ -17,6 +17,9 @@ public:
 
     CharacterObject* RequestCharacterSpawn(void* spawnObject, SpawnObjectData* spawnObjectData, math::Vector& position, math::Vector& direction);
     //VehicleObject* RequestVehicleSpawn();
+
+    // Native
+    void CVM_SetMainCharacterPackage( char* package_name, int unk1 );
 };
 
 #pragma pack(pop)
